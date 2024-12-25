@@ -14,11 +14,11 @@ classDiagram
         + label: str
         # _prev: set[Value]
         # _operator: str
-        + \_\_repr\_\_() str
-        + \_\_add\_\_(other: Value) Value
-        + \_\_mul\_\_(other: Value) Value
-        + \_\_sub\_\_(other: Value) Value
-        + \_\_truediv\_\_(other: Value) Value
+        + __repr__() str
+        + __add__(other: Value) Value
+        + __mul__(other: Value) Value
+        + __sub__(other: Value) Value
+        + __truediv__(other: Value) Value
     }
 ```
 
