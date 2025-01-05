@@ -22,19 +22,6 @@ classDiagram
     }
 ```
 
-
-## The Neuron
-WIP
-
-## The Network Layer
-WIP
-
-## The Neural Network
-WIP
-
-## Forward Propagation 
-WIP
-
 ## Back Propagation
 
 Back-propagation is the process of finding out how a previous value affects the final value.
@@ -95,5 +82,3 @@ Similarly:
 ```math
 \frac{dL}{df} = d
 ```
-## Neural Network Training
-You guessed it, WIP.
