@@ -69,9 +69,6 @@ L = d * f
 \frac{dL}{dd} = \lim_{h \to 0} \frac{(df+hf - df)}{h}
 ```
 ```math
-\frac{dL}{dd} = \lim_{h \to 0} \frac{(df+hf - df)}{h}
-```
-```math
 \frac{dL}{dd} = \lim_{h \to 0} \frac{hf}{h}
 ```
 ```math
