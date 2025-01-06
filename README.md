@@ -72,10 +72,79 @@ L = d * f
 \frac{dL}{dd} = \lim_{h \to 0} \frac{hf}{h}
 ```
 ```math
-\therefore \frac{dL}{dd} = f
+\therefore \frac{dL}{dd} = f = -2
 ```
 
 Similarly:
 ```math
-\frac{dL}{df} = d
+\frac{dL}{df} = d = 4
 ```
+
+Updating the graph with the gradients of d & f:
+
+![Network graph with values of gradient updated.](./images/nn_gradient_d_f.svg)
+
+### Calculus: Chain Rule
+When z is a function of y, and y is a function of x:
+```math
+z = f(y)
+```
+```math
+y = f(x)
+```
+Then the chain rule can be stated as:
+```math
+\frac{dz}{dx} = \frac{dz}{dy} \cdot \frac{dy}{dx}
+```
+
+#### How a Change in 'c' Affects 'L' (Proof)
+Our network expressions are as follows:
+```math
+d = e + c
+```
+```math
+L = d +f
+```
+Now using the chain rule, we can see the impact of 'c' on 'L' as:
+```math
+\frac{dL}{dc} = \frac{dL}{dd} \cdot \frac{dd}{dc}
+```
+First let's calculate the impact of 'c' on 'd' using the definition of a derivative:
+```math
+\frac{dd}{dc} = \lim_{h \to 0} \frac{f(c + h) - f(c)}{h}
+```
+```math
+\frac{dd}{dc} = \lim_{h \to 0} \frac{(e+c+h) - (e+c))}{h}
+```
+```math
+\frac{dd}{dc} = \lim_{h \to 0} \frac{e+c+h-e-c}{h}
+```
+```math
+\frac{dd}{dc} = \lim_{h \to 0} \frac{h}{h}
+```
+```math
+\frac{dd}{dc} = 1
+```
+From our previous result, we already know that 
+```math
+\frac{dL}{dd} = f = -2
+```
+Now putting it all together in the chain rule:
+```math
+\therefore \frac{dL}{dc} = -2 \times 1 = -2
+```
+
+Similarly using the chain rule, we can see the impact of 'e' on 'L' as:
+```math
+\frac{dL}{de} = \frac{dL}{dd} \cdot \frac{dd}{de}
+```
+```math
+\frac{dd}{de} = 1
+```
+```math
+\therefore \frac{dL}{de} = 1 \times -2 = -2
+```
+
+Updating the graph with the gradients of c & e:
+
+![Network graph with values of gradient updated.](./images/nn_gradient_c_e.svg)
