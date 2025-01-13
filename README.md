@@ -97,7 +97,7 @@ Then the chain rule can be stated as:
 \frac{dz}{dx} = \frac{dz}{dy} \cdot \frac{dy}{dx}
 ```
 
-#### How a Change in 'c' Affects 'L' (Proof)
+#### How a Change in 'c' & 'e' Affects 'L' (Proof)
 Our network expressions are as follows:
 ```math
 d = e + c
@@ -148,3 +148,23 @@ Similarly using the chain rule, we can see the impact of 'e' on 'L' as:
 Updating the graph with the gradients of c & e:
 
 ![Network graph with values of gradient updated.](./images/nn_gradient_c_e.svg)
+
+#### How a Change in 'a' & 'b' Affects 'L'
+Similarly, to find how a change in 'a' affects 'L':
+```math
+\frac{dL}{da} = \frac{dL}{de} \times \frac{de}{da}
+```
+```math
+\because  \frac{de}{da} = b = -3
+```
+```math
+\frac{dL}{da} = -2 \times -3 = 6
+```
+
+To find out how a change in 'b' affects 'L':
+```math
+\frac{dL}{db} = \frac{dL}{de} \times \frac{de}{db} = -2 \times 2 = -4
+```
+
+### Final Graph After 1 Round of Back Propagation
+![Network graph with all values of gradient updated.](./images/nn_all_gradients.svg)
