@@ -1,5 +1,5 @@
 # Micrograd
-Building neural networks from scratch.
+A step by step approach to build neural networks from scratch.
 
 This repository is built to replicate the existing [micrograd library](https://github.com/karpathy/micrograd) build by Andrej Karpathy.
 
@@ -168,3 +168,10 @@ To find out how a change in 'b' affects 'L':
 
 ### Final Graph After 1 Round of Back Propagation
 ![Network graph with all values of gradient updated.](./images/nn_all_gradients.svg)
+
+### Increasing Value of Output: 'L'
+If we want 'L' to increase, we need to go in the direction of the gradient in all the leaf nodes  (that we usually have control over).
+
+![Value of 'L' when child nodes are nudged by a small step size](./images/nn_nudge_small_step.svg)
+
+Previously the value of 'L' was -8. Now after taking a small step size of 0.01 in the direction of the gradient, we can see that 'L' has become more positive (-7.286).
