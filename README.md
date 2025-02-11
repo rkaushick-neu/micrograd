@@ -19,6 +19,7 @@ classDiagram
         + __mul__(other: Value) Value
         + __sub__(other: Value) Value
         + __truediv__(other: Value) Value
+        + tanh() Value
     }
 ```
 
@@ -170,7 +171,7 @@ To find out how a change in 'b' affects 'L':
 ![Network graph with all values of gradient updated.](./images/nn_all_gradients.svg)
 
 ### Increasing Value of Output: 'L'
-If we want 'L' to increase, we need to go in the direction of the gradient in all the leaf nodes  (that we usually have control over).
+If we want 'L' to increase, we need to take a small step size in the direction of the gradient in all the leaf nodes  (that we usually have control over).
 
 ![Value of 'L' when child nodes are nudged by a small step size](./images/nn_nudge_small_step.svg)
 
