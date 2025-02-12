@@ -176,3 +176,35 @@ If we want 'L' to increase, we need to take a small step size in the direction o
 ![Value of 'L' when child nodes are nudged by a small step size](./images/nn_nudge_small_step.svg)
 
 Previously the value of 'L' was -8. Now after taking a small step size of 0.01 in the direction of the gradient, we can see that 'L' has become more positive (-7.286).
+
+## Basic Neural Network
+The basic neuron has the following components:
+1. Inputs: x1, x2
+2. Weights: w1, w2
+3. Some bias: b
+4. Activation Function
+
+This can be depicted as the following graph:
+
+![Basic Neural Network](./images/basic_nn.svg)
+
+### Activation Functions
+#### TanH
+Hyperbolic Tangent that maps inputs to values in the range (-1, 1).
+
+![](./images/tanh_activation.png)
+
+#### Sigmoid
+Maps all real numbers to values between 0 and 1.
+
+![](./images/sigmoid_activation.png)
+
+#### ReLU: Rectified Linear Unit
+Sets negative values to 0 and leaves positive values unchanged.
+
+![](./images/ReLU_activation.png)
+
+#### Softmax 
+Sets negative values to 0 and leaves positive values unchanged.
+
+![](./images/softmax_activation.png)
